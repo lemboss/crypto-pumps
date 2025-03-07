@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: bybit_monitor_bot
+    restart: always
+    volumes:
+      - ./allowed_users.json:/app/allowed_users.json
+      - ./.env:/app/.env
